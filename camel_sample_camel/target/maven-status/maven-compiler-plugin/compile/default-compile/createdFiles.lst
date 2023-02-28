@@ -1,0 +1,9 @@
+com/sample/camel/routes/InstantRestRoute.class
+com/sample/camel/processor/HelloProcessor.class
+com/sample/camel/models/HelloModel.class
+com/sample/camel/application/CamelApplication.class
+com/sample/camel/routes/RestRoute.class
+com/sample/camel/routes/HelloRoute.class
+com/sample/camel/processor/ExceptionProcessor.class
+com/sample/camel/converter/StringConverter.class
+com/sample/camel/processor/ModelProcessor.class

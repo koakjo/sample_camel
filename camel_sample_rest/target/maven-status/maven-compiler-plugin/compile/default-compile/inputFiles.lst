@@ -1,0 +1,3 @@
+/Users/takehiko/git/camel_sample/camel_sample_rest/src/main/java/com/sample/camel/CamelSampleApplication.java
+/Users/takehiko/git/camel_sample/camel_sample_rest/src/main/java/com/sample/camel/resource/CamelSampleResource.java
+/Users/takehiko/git/camel_sample/camel_sample_rest/src/main/java/com/sample/camel/filter/PreMatchingAuthFilter.java

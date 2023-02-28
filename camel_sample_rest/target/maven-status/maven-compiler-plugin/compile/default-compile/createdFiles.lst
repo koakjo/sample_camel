@@ -1,0 +1,3 @@
+com/sample/camel/CamelSampleApplication.class
+com/sample/camel/resource/CamelSampleResource.class
+com/sample/camel/filter/PreMatchingAuthFilter.class

@@ -1,0 +1,9 @@
+/Users/takehiko/git/camel_sample/camel_sample_camel/src/main/java/com/sample/camel/models/HelloModel.java
+/Users/takehiko/git/camel_sample/camel_sample_camel/src/main/java/com/sample/camel/converter/StringConverter.java
+/Users/takehiko/git/camel_sample/camel_sample_camel/src/main/java/com/sample/camel/processor/HelloProcessor.java
+/Users/takehiko/git/camel_sample/camel_sample_camel/src/main/java/com/sample/camel/processor/ModelProcessor.java
+/Users/takehiko/git/camel_sample/camel_sample_camel/src/main/java/com/sample/camel/application/CamelApplication.java
+/Users/takehiko/git/camel_sample/camel_sample_camel/src/main/java/com/sample/camel/routes/HelloRoute.java
+/Users/takehiko/git/camel_sample/camel_sample_camel/src/main/java/com/sample/camel/processor/ExceptionProcessor.java
+/Users/takehiko/git/camel_sample/camel_sample_camel/src/main/java/com/sample/camel/routes/InstantRestRoute.java
+/Users/takehiko/git/camel_sample/camel_sample_camel/src/main/java/com/sample/camel/routes/RestRoute.java
