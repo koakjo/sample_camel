@@ -5,7 +5,6 @@ import org.apache.camel.CamelContext;
 import org.apache.camel.impl.DefaultCamelContext;
 import org.apache.camel.main.Main;
 
-import com.sample.camel.routes.HelloRoute;
 import com.sample.camel.routes.RestRoute;
 
 /**
@@ -34,7 +33,7 @@ public class CamelApplication
 			
 			System.out.println( "before main.run()");
 			main.configure().addRoutesBuilder(new RestRoute());
-			main.configure().addRoutesBuilder(new HelloRoute());
+			//main.configure().addRoutesBuilder(new HelloRoute());
 			main.run();
 			
 		} catch (Exception e) {
