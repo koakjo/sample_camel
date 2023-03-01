@@ -2,12 +2,8 @@ package com.sample.camel.routes;
 
 import java.io.IOException;
 
-import org.apache.camel.CamelContext;
 import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
-import org.apache.camel.impl.DefaultCamelContext;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.sample.camel.models.HelloModel;
 import com.sample.camel.processor.ExceptionProcessor;
@@ -24,8 +20,8 @@ public class RestRoute extends RouteBuilder{
 	@Override
 	public void configure() throws Exception {
 		
-		CamelContext camelContext = new DefaultCamelContext();
-		Logger logger = LoggerFactory.getLogger("testLogger");
+		//CamelContext camelContext = new DefaultCamelContext();
+		//Logger logger = LoggerFactory.getLogger("testLogger");
 		
 		/* 
 		 * 現状、ポート番号を指定すると落ちてしまったり、
@@ -39,7 +35,7 @@ public class RestRoute extends RouteBuilder{
 		*/
 		
 		//undertow uses.(jboss also use it as subsystem.)
-		restConfiguration().component("undertow")
+		restConfiguration().component("netty-http")
 				.host("localhost")
 				.contextPath("/undertow");
 		
@@ -84,6 +80,8 @@ public class RestRoute extends RouteBuilder{
 					//do not work. Maybe, logger register problem. 
 					from("direct:get_test2")
 						//.log(LoggingLevel.ERROR,logger,"get_test2 test errorlog")
+						.setBody().constant("direct get is coming.")
+						.to("stream:out")
 						.end();
 			
 			//case3
@@ -232,6 +230,7 @@ public class RestRoute extends RouteBuilder{
 							        .setHeader(Exchange.CONTENT_TYPE, constant("application/json"))
 							        .setHeader("Authorization", constant("access_token"))
 									.to(case6_url)
+									.process(new HelloProcessor())
 								.doCatch(Exception.class)
 									.setBody().constant("direct model-processing is coming.")
 									.to("stream:out")
@@ -258,7 +257,9 @@ public class RestRoute extends RouteBuilder{
 						.endChoice();
 							
 						from("direct:ok10")
-							.transform().constant("OK!").end();
+							.transform().constant("OK!")
+							.transform().exchange();
+							
 						
 						
 						from("direct:ng10")

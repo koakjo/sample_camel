@@ -3,7 +3,7 @@ README
 ## what's this?
 
 JakartaEE10 sample REST app.
-The porpose is to understand differences between JakartaEE8 to JakartaEE10(9.1) for myself.
+The porpose is to understand differences between JakartaEE8 and JakartaEE10(9.1) for myself.
 
 ## future prospects
 
