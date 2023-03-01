@@ -22,7 +22,7 @@ public class RestRoute extends RouteBuilder{
 	String case9_url = "undertow:http://localhost:8080/camel_sample_rest-1.0-SNAPSHOT/RestClient/cameltest/rest1/";
 	
 	@Override
-    public void configure() throws Exception {
+	public void configure() throws Exception {
 		
 		CamelContext camelContext = new DefaultCamelContext();
 		Logger logger = LoggerFactory.getLogger("testLogger");
